@@ -1,0 +1,99 @@
+<head>
+    <style>
+        @page {
+            size: a4 portrait;
+            @frame header_frame {           /* Static Frame */
+                -pdf-frame-content: header_content;
+                left: 50pt; width: 512pt; top: 50pt; height: 40pt;
+            }
+            @frame content_frame {          /* Content Frame */
+                left: 50pt; width: 512pt; top: 90pt; height: 632pt;
+            }
+            @frame footer_frame {           /* Another static Frame */
+                -pdf-frame-content: footer_content;
+                left: 50pt; width: 512pt; top: 772pt; height: 20pt;
+            }
+        }
+    </style>
+    </head>
+    
+    <body>
+        <!-- Content for Static Frame 'header_frame' -->
+        <div id="header_content">
+            <img src="https://www.drsoftsistemas.com/wp-content/uploads/2023/09/cropped-drsistemes.png" alt="Factura DR Soft Sistemes">
+        </div>
+        <h1>Presupuesto DR Soft Sistemes</h1>
+        
+    
+    
+        <hr>
+    
+        <table>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+     
+                <td>CPU Cores</td>
+                <td>{{ cpu }} Cores</td>
+                <td>{{ cpu_price }}€</td>
+            </tr>
+            <tr>
+     
+                <td>RAM GB </td>
+                <td>{{ ram }} GB</td>
+                <td>{{ ram_price }}€</td>
+            </tr>
+            <tr>
+     
+                <td>SSD GB </td>
+                <td>{{ ssd }} GB</td>
+                <td>{{ ssd_price }}€</td>
+            </tr>
+            <tr>
+     
+                <td>SSD2 GB</td>
+                <td>{{ ssd2 }} GB</td>
+                <td>{{ ssd2_price}}€</td>
+            </tr>
+            <tr>
+     
+                <td>Backup TB</td>
+                <td>{{ backups }} GB</td>
+                <td>{{ backups_price}}€</td>
+            </tr>
+            <tr>
+     
+                <td>Usuarios</td>
+                <td>{{ usuarios }}</td>
+                <td>{{ usuarios_price }}€</td>
+            </tr>
+            <tr>
+                <td>{% if windows %}Windows{% endif %}</td>
+                <td>{% if windows %}Si{% endif %}</td>
+                <td>{% if windows %}{{ windows_price }}€{% endif %}</td>
+            </tr>
+            <tr>
+                <td>{% if red %}Red{% endif %}</td>
+                <td>{% if red %}Si{% endif %}</td>
+                <td>{% if red %}{{ red_price }}€{% endif %}</td>
+            </tr>
+            <tr>
+                <td>{% if dedicada %}Dedicada{% endif %}</td>
+                <td>{% if dedicada %}Si{% endif %}</td>
+                <td>{% if dedicada %}{{ dedicada_price }}€{% endif %}</td>
+            </tr>
+            <tr>
+                <td>{% if admin %}Admin{% endif %}</td>
+                <td>{% if admin %}Si{% endif %}</td>
+                <td>{% if admin %}{{ admin_price }}€{% endif %}</td>
+            </tr>
+        </table>
+
+        <hr>
+    
+        <h2><strong>TOTAL A PAGAR: {{ total_price }}€</strong></h2>
+    </body>
+    </html>
