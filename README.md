@@ -14,7 +14,7 @@ Una calculadora interactiva que muestra precios en tiempo real para servidores p
 ---
 
 ## 🛠️ Tecnologías
-- **Frontend**: HTML, CSS, JavaScript, GSAP (animaciones).
+- **Frontend**: HTML, TailwindCSS, JavaScript, GSAP (animaciones).
 - **Backend**: Django, Python.
 - **Generación de PDFs**: xhtml2pdf.
 - **API**: Para cálculos dinámicos basados en las configuraciones seleccionadas.
